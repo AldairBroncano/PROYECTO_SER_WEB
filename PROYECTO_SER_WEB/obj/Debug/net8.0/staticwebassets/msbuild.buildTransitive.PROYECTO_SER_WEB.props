@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PROYECTO_SER_WEB.props" />
+</Project>

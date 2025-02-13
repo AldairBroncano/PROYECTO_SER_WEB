@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PROYECTO_SER_WEB.Models.Carrito>
+
+@{
+    ViewData["Title"] = "Ver Carrito";
+}
+
+<div class="container mt-5" style="background-color: #1a2a3a; color: white; border-radius: 10px; padding: 20px;">
+    <h1 class="text-center mb-4">Carrito de Compras</h1>
+
+    @if (TempData["mensaje"] != null)
+    {
+        <div class="alert alert-warning">
+            <h4><strong>@TempData["mensaje"]</strong></h4>
+        </div>
+    }
+
+    <p class="text-center">
+        <a asp-action="IndexProductos" class="btn btn-info btn-lg">Seguir Comprando</a> |
+        <a asp-action="PagarCarrito" class="btn btn-primary btn-lg">Pagar</a>
+    </p>
+
+    <!-- Carrito de productos -->
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow" style="background-color: #34495e; color: white;">
+                    <img src="@Url.Content("/IMAGENES/" + item.Codigo + ".jpg")"
+                         class="card-img-top"
+                         alt="@item.NombreProducto"
+                         style="height: 200px; object-fit: cover; margin-bottom: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.NombreProducto</h5>
+                        <dl class="row">
+                            <dt class="col-sm-4">Código:</dt>
+                            <dd class="col-sm-8">@item.Codigo</dd>
+
+                            <dt class="col-sm-4">Precio:</dt>
+                            <dd class="col-sm-8">S/. @item.Precio</dd>
+
+                            <dt class="col-sm-4">Cantidad:</dt>
+                            <dd class="col-sm-8">@item.Cantidad</dd>
+
+                            <dt class="col-sm-4">Importe:</dt>
+                            <dd class="col-sm-8">S/. @item.Importe</dd>
+                        </dl>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-action="AgregarAlCarrito" class="btn btn-success"
+                           new { id=item.Codigo }>Modificar</a>
+                        <a asp-action="EliminarProducto" class="btn btn-danger"
+                           new { id=item.Codigo }>Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Total a pagar -->
+    @if (ViewBag.total != null)
+    {
+        <div class="alert alert-info mt-4">
+            <h4>Total a Pagar: <strong>S/. @ViewBag.total</strong></h4>
+        </div>
+    }
+</div>

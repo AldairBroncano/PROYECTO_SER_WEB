@@ -1,0 +1,73 @@
+﻿@model IEnumerable<PROYECTO_SER_WEB.Models.Carrito>
+
+@{
+    ViewData["Title"] = "Pagar Carrito";
+}
+
+<div class="container mt-5" style="background-color: #1a2a3a; color: white; border-radius: 10px; padding: 20px;">
+    <h1 class="text-center mb-4">Pagar Carrito</h1>
+
+    @if (ViewBag.mensaje != null)
+    {
+        <div class="alert alert-info">
+            <h4><strong>@ViewBag.mensaje</strong></h4>
+        </div>
+    }
+
+    <form asp-action="PagarCarrito" asp-route-cod_cli="cod_cli" method="post">
+        <div class="mb-4">
+            <p>Fecha: <strong>@DateTime.Today.ToShortDateString()</strong></p>
+            <p>
+                Cliente:
+                <select name="cod_cli" asp-items="@ViewBag.clientes" class="form-select">
+                    <option value="0">Seleccione</option>
+                </select>
+            </p>
+            @Html.Hidden("tot_vta", (decimal)@ViewBag.tot_vta)
+            <hr />
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-lg">Pagar</button>
+                <a asp-action="VerCarrito" class="btn btn-warning btn-lg ml-3">Ver Carrito</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Carrito de productos -->
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow" style="background-color: #34495e; color: white;">
+                    <img src="@Url.Content("/IMAGENES/" + item.Codigo + ".jpg")"
+                         class="card-img-top"
+                         alt="@item.NombreProducto"
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.NombreProducto</h5>
+                        <dl class="row">
+                            <dt class="col-sm-4">Código:</dt>
+                            <dd class="col-sm-8">@item.Codigo</dd>
+
+                            <dt class="col-sm-4">Precio:</dt>
+                            <dd class="col-sm-8">S/. @item.Precio</dd>
+
+                            <dt class="col-sm-4">Cantidad:</dt>
+                            <dd class="col-sm-8">@item.Cantidad</dd>
+
+                            <dt class="col-sm-4">Importe:</dt>
+                            <dd class="col-sm-8">S/. @item.Importe</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Total a pagar -->
+    @if (ViewBag.tot_vta != null)
+    {
+        <div class="alert alert-info mt-4">
+            <h4>Total a Pagar: <strong>S/. @ViewBag.tot_vta</strong></h4>
+        </div>
+    }
+</div>
