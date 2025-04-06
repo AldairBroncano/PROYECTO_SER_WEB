@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PROYECTO_SER_WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a15aeeef8bac1af41ddfa80e7715d9da48f5201")]
 [assembly: System.Reflection.AssemblyProductAttribute("PROYECTO_SER_WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PROYECTO_SER_WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

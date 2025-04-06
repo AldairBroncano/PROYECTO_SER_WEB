@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\aldai\\source\\repos\\SLN_PROYECTO_SER_WEB\\PROYECTO_SER_WEB\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PROYECTO_SER_WEB.bundle.scp.css",
-      "PackagePath": "staticwebassets\\PROYECTO_SER_WEB.bundle.scp.css"
+      "PackagePath": "staticwebassets\\PROYECTO_SER_WEB.mgrhvcg23w.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\aldai\\source\\repos\\SLN_PROYECTO_SER_WEB\\PROYECTO_SER_WEB\\wwwroot\\IMAGENES.rar",
@@ -307,6 +307,10 @@
     {
       "Id": "C:\\Users\\aldai\\source\\repos\\SLN_PROYECTO_SER_WEB\\PROYECTO_SER_WEB\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PROYECTO_SER_WEB.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PROYECTO_SER_WEB.Microsoft.AspNetCore.StaticWebAssets.props",

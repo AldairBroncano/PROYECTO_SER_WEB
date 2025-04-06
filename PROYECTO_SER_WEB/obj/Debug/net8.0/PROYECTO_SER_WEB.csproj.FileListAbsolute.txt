@@ -231,3 +231,8 @@ C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\bin\Debug\net8
 C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\bin\Debug\net8.0\PROYECTO_SER_WEB.staticwebassets.endpoints.json
+C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\obj\Debug\net8.0\PROYECTO_SER_WEB.sourcelink.json
+C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\obj\Debug\net8.0\staticwebassets\msbuild.PROYECTO_SER_WEB.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\aldai\source\repos\SLN_PROYECTO_SER_WEB\PROYECTO_SER_WEB\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
